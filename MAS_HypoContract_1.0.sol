@@ -69,22 +69,22 @@ struct RealEstate {
     }
 
     modifier onlyVendors {
-        require(users[msg.sender].status == State.Verified, "You are not been verified yet.");
+        require(users[msg.sender].status == State.Verified, "You have not been verified yet!.");
         _;
     }
 
     modifier onlyBuyers {
-        require(users[msg.sender].status == State.Verified, "You are not been verified yet.");
+        require(users[msg.sender].status == State.Verified, "You have not been verified yet!.");
         _;
     }
 
     modifier onlyInvestors {
-        require(users[msg.sender].status == State.Verified, "You are not been verified yet.");
+        require(users[msg.sender].status == State.Verified, "You have not been verified yet!.");
         _;
     }
 
     modifier onlyNotary {
-        require(users[msg.sender].status == State.Verified, "You are not been verified yet.");
+        require(users[msg.sender].status == State.Verified, "You have not been verified yet!.");
         _;
     }
 
@@ -114,7 +114,7 @@ struct RealEstate {
 
 // Functions with restricted access (Can be used after User-Verification)
 
-    function createRealEstate(
+    function CreateRealEstate(
         string memory _ImmoName,
         uint _ParcelId,
         string memory _street,
